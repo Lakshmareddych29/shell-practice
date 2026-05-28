@@ -10,4 +10,6 @@ echo " which directory: $PWD"
 echo "home directory:$HOME"
 echo "PID of the current script:$$"
 sleep 5 &
-echo "PID of the background command running just now :$!" 
+echo "PID of the background command running just now :$!"
+wait $!
+echo "line number :$LINENO" 
