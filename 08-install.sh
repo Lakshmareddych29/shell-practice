@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "install mysql "
-dnf install mysql -y
-VALIDATE mysql $?
 
 VALIDATE() {   
     if [ $2 -ne 0 ]; then
@@ -11,3 +8,7 @@ VALIDATE() {
         echo " instalation of $1 is .. successfully done "
     fi
 }
+
+echo "install mysql "
+dnf install mysql -y
+VALIDATE mysql $?
