@@ -4,7 +4,7 @@ echo "install mysql "
 dnf install mysql -y
 VALIDATE mysql $?
 
-VALIDATE(){   
+VALIDATE() {   
     if [ $2 -ne 0 ]; then
         echo "instalation of $1 is .. failed"
     else 
