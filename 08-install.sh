@@ -2,9 +2,12 @@
 
 echo "install mysql "
 dnf install mysql -y
+VALIDATE mysql $?
 
-if [ $? -eq 0 ]; then
- echo "instalation of my sql is .. alerady done"
+VALIDATE(){   
+if [ $2 -ne 0 ]; then
+ echo "instalation of $1 is .. failed"
 else 
- echo " instalation of my sql is .. failed "
+ echo " instalation of $1 is .. successfully done "
 fi
+}
